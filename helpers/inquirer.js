@@ -10,10 +10,16 @@ const preguntas = [{
 ];
 
 const inquirerMenu = async() => {
-    console.clear();
+    //console.clear();
     console.log('======================');
     console.log(' Seleccione una opcion');
     console.log('======================');
 
-    const opt = await inquirer.prompt([])
+    const opt = await inquirer.prompt(preguntas);
+
+    return opt;
+}
+
+module.exports = {
+    inquirerMenu
 }
